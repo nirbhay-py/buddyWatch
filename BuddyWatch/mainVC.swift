@@ -46,12 +46,11 @@ class mainVC: UIViewController {
     
     func fetchDetails()
     {
-        var downloadUrl:String=""
-        var ref = Database.database().reference().child("userNode").child(Auth.auth().currentUser!.uid);
+        let ref = Database.database().reference().child("userNode").child(Auth.auth().currentUser!.uid);
         ref.observeSingleEvent(of: .value, with:{ (snapshot) in
             let value = snapshot.value as! [String:String]
             self.user.name = value["username"]!
-            self.user.phone = value["phone"]! 
+            self.user.email = value["email"]!
             self.user.city = value["city"]!
             let storage = Storage.storage()
             let storageRef = storage.reference().child("userPictures").child(Auth.auth().currentUser!.uid)
@@ -63,7 +62,7 @@ class mainVC: UIViewController {
                 let image = UIImage(data: data!)
                 self.profilePic.image = image
                 self.nameLbl.text = self.user.name
-                self.emailLbl.text = self.user.phone
+                self.emailLbl.text = self.user.email
                 self.hud.dismiss(animated: true)
               }
             }

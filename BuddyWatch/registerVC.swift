@@ -85,9 +85,9 @@ class registerVC: UIViewController, UINavigationControllerDelegate, UIImagePicke
         }else{
             print(txt.text!)
             self.thisUser.name = txt.text!
-            self.placeholderLbl.text = "What's your phone number?"
+            self.placeholderLbl.text = "What's your email?"
             txt.text=""
-            txt.placeholder = "Here you go"
+            txt.placeholder = "Enter here"
             UIView.animate(withDuration:0.5, animations: {
                 self.btn1const.constant-=self.view.bounds.width
                 self.btn2const.constant+=self.view.bounds.width
@@ -98,15 +98,14 @@ class registerVC: UIViewController, UINavigationControllerDelegate, UIImagePicke
     @IBAction func btn2Clicked(_ sender: Any) {
         if(txt.text==""){
             showAlert(msg:"You can't leave this field blank!")
-        }else if(txt.text!.count != 10){
-            showAlert(msg:"Looks like you entered an invalid phone number.")
+        }else if(!(isValidEmail(emailStr: txt.text!))){
+            showAlert(msg:"Looks like you entered an invalid email.")
         }else{
-            self.thisUser.phone = txt.text!
-            print(self.thisUser.email)
+            self.thisUser.email = txt.text!
             self.placeholderLbl.text = "Which city do you live in?"
             txt.text=""
             txt.placeholder = "Here you go"
-            UIView.animate(withDuration:0.5, animations: {
+            UIView.animate(withDuration:0.5, animations:{
                 self.btn2const.constant-=self.view.bounds.width
                 self.btn3const.constant+=self.view.bounds.width
                 self.view.layoutIfNeeded()
@@ -147,7 +146,7 @@ class registerVC: UIViewController, UINavigationControllerDelegate, UIImagePicke
         view.endEditing(true)
     }
     @IBAction func btn4Clicked(_ sender: Any) {
-        print(self.thisUser.name,self.thisUser.city,self.thisUser.phone)
+        print(self.thisUser.name,self.thisUser.city,self.thisUser.email)
         if(txt.text==""){
             showAlert(msg:"You can't leave this field blank!")
         }else if(txt.text!.count<8){
@@ -185,7 +184,7 @@ class registerVC: UIViewController, UINavigationControllerDelegate, UIImagePicke
                     ref.setValue([
                         "username":self.thisUser.name,
                         "city":self.thisUser.city,
-                        "phone":self.thisUser.phone
+                        "phone":self.thisUser.email
                     ]);
                     let storage = Storage.storage()
                     let storageRef = storage.reference().child("userPictures").child(Auth.auth().currentUser!.uid)

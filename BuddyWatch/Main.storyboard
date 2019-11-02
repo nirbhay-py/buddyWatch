@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BuddyWatch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8O-JA-duA">
-                                <rect key="frame" x="90" y="94" width="195" height="46.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FurProject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8O-JA-duA">
+                                <rect key="frame" x="107.5" y="94" width="160" height="46.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="39"/>
                                 <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -100,12 +100,13 @@
                                 <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oh, hey there! Welcome to Buddy Watch. We are a team of high-schoolers dedicated to improving the lives of our furry friends." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzR-o7-N11">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzR-o7-N11">
                                 <rect key="frame" x="20" y="201" width="300" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="Kdr-P2-QIc"/>
                                     <constraint firstAttribute="height" constant="175" id="a2a-Gp-0pc"/>
                                 </constraints>
+                                <string key="text">Oh, hey there! Welcome to the FurProject. We are a team of high-schoolers dedicated to improving the lives of our furry friends.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="27"/>
                                 <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -405,7 +406,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone no." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QFu-Dd-V1C">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QFu-Dd-V1C">
                                 <rect key="frame" x="37.5" y="194" width="300" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="M3x-Lb-mii"/>
@@ -424,9 +425,8 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BuddyWatch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdI-pP-5sq">
-                                <rect key="frame" x="90" y="102" width="195" height="46.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="FurProject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdI-pP-5sq">
+                                <rect key="frame" x="107.5" y="102" width="160" height="47"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="39"/>
                                 <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -454,6 +454,7 @@
                             <constraint firstItem="ocS-zk-BwN" firstAttribute="top" secondItem="Cuo-GK-cHK" secondAttribute="bottom" constant="35" id="HfY-p6-5sI"/>
                             <constraint firstItem="ocS-zk-BwN" firstAttribute="centerX" secondItem="bn3-mw-G3h" secondAttribute="centerX" id="bIg-4x-Z8K"/>
                             <constraint firstItem="QFu-Dd-V1C" firstAttribute="top" secondItem="Be6-1a-kgZ" secondAttribute="top" constant="150" id="cDm-Et-fTQ"/>
+                            <constraint firstItem="WdI-pP-5sq" firstAttribute="centerX" secondItem="bn3-mw-G3h" secondAttribute="centerX" id="hIA-Eh-NoF"/>
                             <constraint firstItem="Cuo-GK-cHK" firstAttribute="top" secondItem="QFu-Dd-V1C" secondAttribute="bottom" constant="30" id="qYQ-EV-zsc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Be6-1a-kgZ"/>

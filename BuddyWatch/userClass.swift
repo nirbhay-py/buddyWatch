@@ -2,16 +2,16 @@ import Foundation
 
 class User{
     var name:String
-    var phone:String
+    var email:String
     var city:String
     init(){
         self.name=""
-        self.phone=""
+        self.email=""
         self.city=""
     }
-    init(name:String,phone:String,city:String) {
+    init(name:String,email:String,city:String) {
         self.name = name
-        self.phone = phone
+        self.email = email
         self.city = city
     }
 }
