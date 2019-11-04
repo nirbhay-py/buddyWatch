@@ -3,6 +3,7 @@ import Foundation
 enum reportType{
     case adoptionType
     case injuredAnimal
+    case volunteerOpp
 }
 
 class reportClass{

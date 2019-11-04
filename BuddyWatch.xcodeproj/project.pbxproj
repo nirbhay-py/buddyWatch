@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B810403DFB0F7B4AFFD5253 /* Pods_BuddyWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4849ABC2C2FDEC0C01151D77 /* Pods_BuddyWatch.framework */; };
+		1C125AFB236DE4100068594D /* newAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C125AFA236DE40F0068594D /* newAlertVC.swift */; };
 		1C527FA42368B7F600565560 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C527FA32368B7F600565560 /* AppDelegate.swift */; };
 		1C527FA62368B7F600565560 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C527FA52368B7F600565560 /* SceneDelegate.swift */; };
 		1C527FA82368B7F600565560 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C527FA72368B7F600565560 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 		1C527FB92368B83200565560 /* reportClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C527FB72368B83200565560 /* reportClass.swift */; };
 		1C527FBA2368B83200565560 /* userClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C527FB82368B83200565560 /* userClass.swift */; };
 		1C527FBC2368B84F00565560 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C527FBB2368B84F00565560 /* Main.storyboard */; };
+		1C577171236F9F2000EDC0B6 /* appUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C577170236F9F2000EDC0B6 /* appUtils.swift */; };
 		1C597C742368B98D002936CE /* registerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C597C732368B98D002936CE /* registerVC.swift */; };
 		1C597C762368E00B002936CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C597C752368E00B002936CE /* GoogleService-Info.plist */; };
 		1C597C782368E5AC002936CE /* mainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C597C772368E5AC002936CE /* mainVC.swift */; };
@@ -23,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C125AFA236DE40F0068594D /* newAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newAlertVC.swift; sourceTree = "<group>"; };
 		1C527FA02368B7F600565560 /* BuddyWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuddyWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C527FA32368B7F600565560 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C527FA52368B7F600565560 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +36,7 @@
 		1C527FB72368B83200565560 /* reportClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reportClass.swift; sourceTree = "<group>"; };
 		1C527FB82368B83200565560 /* userClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userClass.swift; sourceTree = "<group>"; };
 		1C527FBB2368B84F00565560 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1C577170236F9F2000EDC0B6 /* appUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appUtils.swift; sourceTree = "<group>"; };
 		1C597C732368B98D002936CE /* registerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerVC.swift; sourceTree = "<group>"; };
 		1C597C752368E00B002936CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1C597C772368E5AC002936CE /* mainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainVC.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				1C597C752368E00B002936CE /* GoogleService-Info.plist */,
 				1C597C772368E5AC002936CE /* mainVC.swift */,
 				1C8AD49E236912620004E24F /* loginVC.swift */,
+				1C125AFA236DE40F0068594D /* newAlertVC.swift */,
+				1C577170236F9F2000EDC0B6 /* appUtils.swift */,
 			);
 			path = BuddyWatch;
 			sourceTree = "<group>";
@@ -248,7 +254,9 @@
 				1C597C782368E5AC002936CE /* mainVC.swift in Sources */,
 				1C527FA82368B7F600565560 /* ViewController.swift in Sources */,
 				1C8AD49F236912620004E24F /* loginVC.swift in Sources */,
+				1C125AFB236DE4100068594D /* newAlertVC.swift in Sources */,
 				1C597C742368B98D002936CE /* registerVC.swift in Sources */,
+				1C577171236F9F2000EDC0B6 /* appUtils.swift in Sources */,
 				1C527FA42368B7F600565560 /* AppDelegate.swift in Sources */,
 				1C527FB92368B83200565560 /* reportClass.swift in Sources */,
 				1C527FA62368B7F600565560 /* SceneDelegate.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-import JGProgressHUD
+import EZLoadingActivity
 
 class loginVC: UIViewController {
     @IBOutlet weak var email: UITextField!
@@ -49,16 +49,14 @@ class loginVC: UIViewController {
         }else if(!(isValidEmail(emailStr: email_txt!))){
              showAlert(msg: "Looks like you entered an invalid email.")
         }else{
-            let hud = JGProgressHUD(style: .extraLight)
-            hud.textLabel.text = "Authenticating..."
-            hud.show(in: self.view,animated: true)
+            EZLoadingActivity.show("Authenticating", disableUI: true)
             Auth.auth().signIn(withEmail: email_txt!, password: pswd_txt!){(authResult,error) in
                 print(authResult)
                 if(error != nil){
-                    hud.dismiss(animated: true)
-                    self.showAlert(msg: error!.localizedDescription)
+                    EZLoadingActivity.hide(false, animated: true)
+                    showAlert(msg: error!.localizedDescription)
                 }else{
-                    hud.dismiss(animated: true)
+                    EZLoadingActivity.hide(true, animated: true)
                     self.performSegue(withIdentifier: "loginToMain", sender: nil)
                 }
             }
@@ -76,11 +74,6 @@ class loginVC: UIViewController {
 
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: emailStr)
-    }
-    func showAlert(msg:String){
-        let alert = UIAlertController(title:"Uh oh!", message: msg, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
-        self.present(alert, animated: true)
     }
     @objc func dismissKeyboard() {
            view.endEditing(true)

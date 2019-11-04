@@ -10,7 +10,12 @@ pod 'Firebase/Analytics'
 pod 'Firebase/Database'
 pod 'GoogleMaps'
 pod 'Firebase/Storage'
+pod 'SCLAlertView'
 pod 'GooglePlaces'
-pod 'JGProgressHUD'
+pod 'SPPermissions/Camera'
+pod 'EZLoadingActivity', :git => 'https://github.com/goktugyil/EZLoadingActivity.git' #Latest release for Swift 3.0
+pod 'SPPermissions/Location'
+pod 'SPPermissions/PhotoLibrary'
+pod 'DataCompression'
 pod 'Firebase/Auth'
 end
