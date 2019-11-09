@@ -15,6 +15,8 @@ class newAlertVC: UIViewController,CLLocationManagerDelegate{
     
     @IBOutlet weak var btn3: UIButton!
     
+    var report:reportType!
+    
     var lat:Double=0
     var lon:Double=0
 
@@ -81,6 +83,8 @@ class newAlertVC: UIViewController,CLLocationManagerDelegate{
         print("locations = \(locValue.latitude) \(locValue.longitude)")
         self.lat = locValue.latitude
         self.lon = locValue.longitude
+        self.lat = locValue.latitude
+        self.lon = locValue.longitude
         self.locationManager.stopUpdatingLocation()
         self.fetchDetails(pos:locValue)
     }
@@ -132,4 +136,26 @@ class newAlertVC: UIViewController,CLLocationManagerDelegate{
         showAlert(msg: error.localizedDescription)
     }
 
+    @IBAction func b1Touched(_ sender: Any) {
+        self.report = reportType.injuredAnimal
+        self.performSegue(withIdentifier: "newAlertSegue", sender: self)
+    }
+    @IBAction func b2Touched(_ sender: Any) {
+        self.report = reportType.adoptionType
+        self.performSegue(withIdentifier: "newAlertSegue", sender: self)
+
+    }
+    @IBAction func b3Touched(_ sender: Any) {
+        self.report = reportType.volunteerOpp
+        self.performSegue(withIdentifier: "newAlertSegue", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! reportVC
+        destination.report = self.report
+        destination.address = self.locLbl.text!
+        destination.name = self.user.name
+        destination.lat = self.lat
+        destination.lon = self.lon
+        destination.user = self.user;
+    }
 }

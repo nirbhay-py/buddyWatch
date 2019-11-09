@@ -63,6 +63,7 @@ class mainVC: UIViewController , CLLocationManagerDelegate {
         }
     }
     override func viewWillAppear(_ animated: Bool) {
+       
         viewConst.constant -= view.bounds.width;
         self.navigationController?.isNavigationBarHidden = true
         view.layoutIfNeeded()
@@ -78,7 +79,6 @@ class mainVC: UIViewController , CLLocationManagerDelegate {
     
     func fetchDetails(pos:CLLocationCoordinate2D)
     {
-        EZLoadingActivity.show("Loading...", disableUI: true)
         // fetch user data
         let ref = Database.database().reference().child("userNode").child(Auth.auth().currentUser!.uid);
         ref.observeSingleEvent(of: .value, with:{ (snapshot) in
@@ -90,7 +90,6 @@ class mainVC: UIViewController , CLLocationManagerDelegate {
                 let storageRef = storage.reference().child("userPictures").child(Auth.auth().currentUser!.uid)
                 storageRef.getData(maxSize: 3 * 1024 * 1024) { data, error in
                   if let error = error {
-                    EZLoadingActivity.hide(false, animated: true)
                     showAlert(msg: error.localizedDescription)
                   } else {
                     let image = UIImage(data: data!)
@@ -101,26 +100,16 @@ class mainVC: UIViewController , CLLocationManagerDelegate {
                            geocoder.reverseGeocodeCoordinate(pos){ resp, err in
                                if let address = resp?.firstResult() {
                                    self.lolLbl.text = address.addressLine1()
-                                   EZLoadingActivity.hide(true, animated: true)
-                                
-
                                }else{
                                    showAlert(msg: "We could not fetch your location - check your app permissions.")
-                                  EZLoadingActivity.hide(false, animated: true)
-
-                               }
+                        }
                     }
                   }
                 }
             }else{
                 showAlert(msg: "We could not fetch your data at this time. Try again later.")
             }
-            
-        }){ (error) in
-            EZLoadingActivity.hide(false, animated: true)
-            print(error.localizedDescription)
-            showAlert(msg: error.localizedDescription)
-        }
+        })
     }
     
 

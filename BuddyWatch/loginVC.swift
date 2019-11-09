@@ -21,7 +21,7 @@ class loginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         btn.layer.cornerRadius = 5;
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:"dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:#selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
 
     }
@@ -42,8 +42,8 @@ class loginVC: UIViewController {
         
     }
     @IBAction func btnPressed(_ sender: Any) {
-        var email_txt = email.text;
-        var pswd_txt = pswd.text;
+        let email_txt = email.text;
+        let pswd_txt = pswd.text;
         if(email_txt==""||pswd_txt==""){
             showAlert(msg: "You can't leave these fields blank.")
         }else if(!(isValidEmail(emailStr: email_txt!))){
@@ -51,7 +51,6 @@ class loginVC: UIViewController {
         }else{
             EZLoadingActivity.show("Authenticating", disableUI: true)
             Auth.auth().signIn(withEmail: email_txt!, password: pswd_txt!){(authResult,error) in
-                print(authResult)
                 if(error != nil){
                     EZLoadingActivity.hide(false, animated: true)
                     showAlert(msg: error!.localizedDescription)
@@ -61,6 +60,9 @@ class loginVC: UIViewController {
                 }
             }
         }
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        EZLoadingActivity.hide(true, animated: true)
     }
     
     func disappear(const:NSLayoutConstraint){

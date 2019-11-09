@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var signUpConst: NSLayoutConstraint!
     
     override func viewDidLoad() {
+        overrideUserInterfaceStyle = .light
         let isAllowedCamera = SPPermission.isAllowed(.camera)
         let isAllowedLoc = SPPermission.isAllowed(.locationWhenInUse)
         let isAllowedLib = SPPermission.isAllowed(.photoLibrary)

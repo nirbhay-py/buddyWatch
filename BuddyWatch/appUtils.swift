@@ -11,5 +11,8 @@ import SCLAlertView
 
 func showAlert(msg:String){
     SCLAlertView().showError("Oops!", subTitle:msg)
+}
 
+func showSuccess(msg:String){
+    SCLAlertView().showSuccess("Success", subTitle: msg)
 }

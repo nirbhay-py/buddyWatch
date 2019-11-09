@@ -24,7 +24,6 @@ class registerVC: UIViewController, UINavigationControllerDelegate, UIImagePicke
     @IBOutlet weak var btn4const: NSLayoutConstraint!
     @IBOutlet weak var selectBtn: UIButton!
     @IBOutlet weak var selectBtnConst: NSLayoutConstraint!
-    @IBOutlet weak var txtLeading: NSLayoutConstraint!
     @IBOutlet weak var btn0const: NSLayoutConstraint!
     @IBOutlet weak var lblHeight: NSLayoutConstraint!
     @IBOutlet weak var btn5: UIButton!
@@ -205,7 +204,7 @@ class registerVC: UIViewController, UINavigationControllerDelegate, UIImagePicke
 
      
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+        if let pickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             profilePic.contentMode = .scaleAspectFit
             profilePic.image = pickedImage
             self.data = pickedImage.pngData()!
