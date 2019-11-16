@@ -80,6 +80,7 @@ class mainVC: UIViewController , CLLocationManagerDelegate {
     func fetchDetails(pos:CLLocationCoordinate2D)
     {
         // fetch user data
+        EZLoadingActivity.show("Fetching your data...", disableUI: true)
         let ref = Database.database().reference().child("userNode").child(Auth.auth().currentUser!.uid);
         ref.observeSingleEvent(of: .value, with:{ (snapshot) in
             if let value = snapshot.value as? [String:String]{
@@ -90,6 +91,7 @@ class mainVC: UIViewController , CLLocationManagerDelegate {
                 let storageRef = storage.reference().child("userPictures").child(Auth.auth().currentUser!.uid)
                 storageRef.getData(maxSize: 3 * 1024 * 1024) { data, error in
                   if let error = error {
+                    EZLoadingActivity.hide(false, animated: true)
                     showAlert(msg: error.localizedDescription)
                   } else {
                     let image = UIImage(data: data!)
@@ -99,8 +101,10 @@ class mainVC: UIViewController , CLLocationManagerDelegate {
                     let geocoder = GMSGeocoder()
                            geocoder.reverseGeocodeCoordinate(pos){ resp, err in
                                if let address = resp?.firstResult() {
+                                    EZLoadingActivity.hide(true, animated: true)
                                    self.lolLbl.text = address.addressLine1()
                                }else{
+                                    EZLoadingActivity.hide(false, animated: true)
                                    showAlert(msg: "We could not fetch your location - check your app permissions.")
                         }
                     }

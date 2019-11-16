@@ -384,6 +384,9 @@
                                 <state key="normal" title="Open Map">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="AIm-tJ-mEd" kind="show" id="fqX-Ez-CfD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9a-qO-rvI">
                                 <rect key="frame" x="20" y="350" width="335" height="50"/>
@@ -453,6 +456,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="toK-HV-3jX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2342" y="1069"/>
+        </scene>
+        <!--MapVC-->
+        <scene sceneID="Jf9-UW-srb">
+            <objects>
+                <viewController id="AIm-tJ-mEd" customClass="mapVC" customModule="BuddyWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XtF-P8-Tnr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="80o-UK-ayX"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="n9t-6D-qZ2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Pf-1l-9L6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3238" y="1068"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="TwI-V9-TOX">
@@ -567,16 +586,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixk-z8-qhQ">
-                                <rect key="frame" x="37.5" y="60" width="300" height="76"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="TFx-dF-Mmm"/>
-                                    <constraint firstAttribute="height" constant="76" id="nv9-lf-f5L"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="29"/>
-                                <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose one of the categories below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCU-I0-tVQ">
                                 <rect key="frame" x="37.5" y="151" width="300" height="35"/>
                                 <constraints>
@@ -642,6 +651,16 @@
                                     <constraint firstAttribute="width" constant="125" id="gtA-B8-c0j"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixk-z8-qhQ">
+                                <rect key="frame" x="37.5" y="60" width="300" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="TFx-dF-Mmm"/>
+                                    <constraint firstAttribute="height" constant="76" id="nv9-lf-f5L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="29"/>
+                                <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -795,8 +814,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XHo-Ys-XfN"/>
-        <segue reference="giY-cp-K1l"/>
-        <segue reference="Cmq-bd-pDq"/>
+        <segue reference="NkY-R6-0OV"/>
+        <segue reference="Nf7-jd-bof"/>
     </inferredMetricsTieBreakers>
 </document>

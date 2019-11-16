@@ -23,6 +23,7 @@
 		1C597C762368E00B002936CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C597C752368E00B002936CE /* GoogleService-Info.plist */; };
 		1C597C782368E5AC002936CE /* mainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C597C772368E5AC002936CE /* mainVC.swift */; };
 		1C8AD49F236912620004E24F /* loginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8AD49E236912620004E24F /* loginVC.swift */; };
+		1CB275D6238096E200FC0E99 /* mapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB275D5238096E200FC0E99 /* mapVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		1C597C772368E5AC002936CE /* mainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainVC.swift; sourceTree = "<group>"; };
 		1C8AD49E236912620004E24F /* loginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
 		1C9E418023693B8C007A590C /* BuddyWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BuddyWatch.entitlements; sourceTree = "<group>"; };
+		1CB275D5238096E200FC0E99 /* mapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapVC.swift; sourceTree = "<group>"; };
 		4849ABC2C2FDEC0C01151D77 /* Pods_BuddyWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuddyWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D4CDCFD410803585E787A33 /* Pods-BuddyWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuddyWatch.debug.xcconfig"; path = "Target Support Files/Pods-BuddyWatch/Pods-BuddyWatch.debug.xcconfig"; sourceTree = "<group>"; };
 		FDA3D56732F317954B7B0B67 /* Pods-BuddyWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuddyWatch.release.xcconfig"; path = "Target Support Files/Pods-BuddyWatch/Pods-BuddyWatch.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				1C125AFA236DE40F0068594D /* newAlertVC.swift */,
 				1C577170236F9F2000EDC0B6 /* appUtils.swift */,
 				1C092AB12370AAE800C154ED /* reportVC.swift */,
+				1CB275D5238096E200FC0E99 /* mapVC.swift */,
 			);
 			path = BuddyWatch;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				1C8AD49F236912620004E24F /* loginVC.swift in Sources */,
 				1C125AFB236DE4100068594D /* newAlertVC.swift in Sources */,
 				1C597C742368B98D002936CE /* registerVC.swift in Sources */,
+				1CB275D6238096E200FC0E99 /* mapVC.swift in Sources */,
 				1C577171236F9F2000EDC0B6 /* appUtils.swift in Sources */,
 				1C527FA42368B7F600565560 /* AppDelegate.swift in Sources */,
 				1C092AB22370AAE800C154ED /* reportVC.swift in Sources */,

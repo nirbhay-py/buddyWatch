@@ -31,11 +31,9 @@ class ViewController: UIViewController {
         }
         SPPermission.Dialog.request(with: toAsk, on: self)
         super.viewDidLoad()
-        let firebaseAuth = Auth.auth()
-        do {
-          try firebaseAuth.signOut()
-        } catch let signOutError as NSError {
-          print ("Error signing out: %@", signOutError)
+        let user = Auth.auth().currentUser
+        if(user != nil){
+            self.performSegue(withIdentifier: "welcomeToMain", sender: self)
         }
     }
 
